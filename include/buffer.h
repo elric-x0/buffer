@@ -125,4 +125,10 @@ int buffer_fread(buffer_t *buff, const char* filename, size_t size);
 *		0 on success
 *  */
 int buffer_fwrite(buffer_t *buff, const char* filename);
+
+
+int buffer_stream_init(buffer_stream_t *buff_stream, size_t chunk_size, const char *filename);
+int buffer_stream_next(buffer_stream_t *buff_stream);
+int buffer_stream_prev(buffer_stream_t *buff_stream);
+int buffer_stream_close(buffer_stream_t *buff_stream);
 #endif
